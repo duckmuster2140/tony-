@@ -1,0 +1,5 @@
+{
+  "name": "AlphaGuard AI - Market Maker Analyzer",
+  "description": "A high-precision trading decision system specialized in new and high-volatility coins, using AI to detect market maker behavior and generate one high-probability trade per day.",
+  "requestFramePermissions": []
+}
