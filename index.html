@@ -3,13 +3,13 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>AlphaGuard PRO | 庄家行为深度审计系统</title>
     
-    <!-- SEO & Social Meta Tags (用于推广显示) -->
-    <meta name="description" content="专为新币设计，AI 深度审计庄家洗盘、吸筹行为。每日仅推一单高胜率合约决策。">
+    <!-- SEO & Social Meta Tags -->
+    <meta name="description" content="AI 驱动的加密货币庄家审计工具。专注新币/Alpha币洗盘监测，日一单决策模型。">
     <meta property="og:title" content="AlphaGuard PRO - 庄家审计引擎">
-    <meta property="og:description" content="实时监控币安数据，研判主力意图。10u 永久解锁专业审计。">
+    <meta property="og:description" content="实时监控大户异动。30天全功能试用已开启，点开即刻审计。">
     <meta property="og:image" content="https://cryptologos.cc/logos/binance-coin-bnb-logo.png">
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#020202">
@@ -21,32 +21,27 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --emerald: #10b981;
-            --bg: #020202;
-        }
+        :root { --emerald: #10b981; --bg: #020202; }
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg);
             color: #fafafa;
             -webkit-tap-highlight-color: transparent;
+            overflow-x: hidden;
         }
         .mono { font-family: 'JetBrains Mono', monospace; }
         
-        /* 移动端平滑滚动 */
-        html { scroll-behavior: smooth; }
-
-        /* 极光背景动画 */
+        /* 极光背景 */
         .aurora {
             position: fixed;
             top: -50%; left: -50%; width: 200%; height: 200%;
-            background: radial-gradient(circle at center, rgba(16,185,129,0.05) 0%, transparent 50%);
+            background: radial-gradient(circle at center, rgba(16,185,129,0.03) 0%, transparent 40%);
             z-index: -1;
-            animation: rotate 20s linear infinite;
+            animation: rotate 30s linear infinite;
         }
         @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
-        /* 跑马灯动画 */
+        /* 跑马灯 */
         @keyframes ticker {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
@@ -54,7 +49,15 @@
         .animate-ticker {
             display: flex;
             width: max-content;
-            animation: ticker 40s linear infinite;
+            animation: ticker 30s linear infinite;
+        }
+
+        /* 玻璃拟态 */
+        .glass {
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
     </style>
 <script type="importmap">
